@@ -1,0 +1,1 @@
+@ sqlplus hrf/hrf @ .\trigger1.bat

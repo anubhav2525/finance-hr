@@ -1,0 +1,117 @@
+<link rel="stylesheet" href="style_reciveable.css">
+<html><head><title>Reciveable</title></head>
+<body><center>
+    <form name=f method=post action=reciveable1.jsp>
+        <marquee scrollamount=1 direction="down">Reciveable Details</marquee>
+        <table border=30>
+            <tr>
+                <th align="left">Program Id</th>
+                <th><input type=text name=t1></th>
+            </tr>
+            <tr>
+                <th align="left">Session</th>
+                <th><input type=text name=t2></th>
+            </tr>
+            <tr>
+                <th align="left">First Semester</th>
+                <th><input type=text name=t3 onkeypress="return allowOnlyNumber(event,this)"></th>
+            </tr>
+            <tr>
+                <th align="left">Second Semester</th>
+                <th><input type=text name=t4 onkeypress="return allowOnlyNumber(event,this)"></th>
+            </tr>
+            <tr>
+                <th align="left">Third Semester</th>
+                <th><input type=text name=t5 onkeypress="return allowOnlyNumber(event,this)"></th>
+            </tr>
+            <tr>
+                <th align="left">Fourth Semester</th>
+                <th><input type=text name=t6 onkeypress="return allowOnlyNumber(event,this)"></th>
+            </tr>
+            <tr>
+                <th align="left">Fifth Semester</th>
+                <th><input type=text name=t7 onkeypress="return allowOnlyNumber(event,this)"></th>
+            </tr>
+            <tr>
+                <th align="left">Sixth Semester</th>
+                <th><input type=text name=t8 onkeypress="return allowOnlyNumber(event,this)"></th>
+            </tr>
+            <tr>
+                <th align="left">Seventh Semester</th>
+                <th><input type=text name=t9 onkeypress="return allowOnlyNumber(event,this)"></th>
+            </tr>
+            <tr>
+                <th align="left">Eighth Semester</th>
+                <th><input type=text name=t10 onkeypress="return allowOnlyNumber(event,this)"></th>
+            </tr>
+            <tr>
+                <th align="left">Total Amount</th>
+                <th><input type=text name=t11 onkeypress="return allowOnlyNumber(event,this)"></th>
+            </tr>
+            <tr>
+                <th colspan=2>
+                    <input type=button value="New" onclick="clean()">
+                    <input type=submit name=b1 value="Save">
+                    <input type=submit name=b1 value="Update">
+                    <input type=submit name=b1 value="Delete">
+                    <input type=button value="Menu" onclick="menu_open()">
+                </th>
+            </tr>
+            <tr>
+                <th colspan=2>
+                    <input type=submit name=b1 value="AllSearch">
+                    <select name=s>
+                        <option>Program</option>
+                        <option>Session1</option>
+                    </select>
+                    <input type=text name=t12>
+                    <input type=submit name=b1 value="Search">
+                </th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
+<script>
+    function clean()
+    {
+        f.t1.value=""
+        f.t2.value=""
+        f.t3.value=""
+        f.t4.value=""
+        f.t5.value=""
+        f.t6.value=""
+        f.t7.value=""
+        f.t8.value=""
+        f.t9.value=""
+        f.t10.value=""
+        f.t11.value=""
+        f.t12.value=""
+
+    }
+    function menu_open()
+    {
+    	window.open("menu.html","_self")
+    }
+
+	// Allow only Number
+	function allowOnlyNumber(e,t)
+	{
+		if(window.event)
+			{
+				var charCode = window.event.keyCode;
+			}
+		else if(e)
+			{
+			var charCode=e.which;
+			}
+		else{return true;}
+		if((charCode >=48 && charCode<=57) ||(charCode==32) || (charCode==45))
+			return true;
+		else
+			{
+			alert("Please Enter Only Numbers");
+			return false;
+			}
+	}
+</script>

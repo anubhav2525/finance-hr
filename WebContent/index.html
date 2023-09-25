@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="login3.css">
+<!DOCTYPE html>
+<html><head>
+	<meta charset="ISO-8859-1">
+	<title>Login</title>
+</head>
+<body>
+<form name=f method=post action="login1.jsp">
+	<marquee direction="down" scrollamount="1"><h1>LOGIN</h1></marquee>
+		<table border=6>
+			<tr>
+				<th align="left">Login ID</th>
+				<th><input type=text name=t1></th>
+			</tr>
+			<tr>
+				<th align="left">Login Password</th>
+				<th><input type=password name=t2></th>
+			<tr>
+				<th colspan=2>
+					<input type=submit value="Login" name=b1>
+					<input type=button value="Cancel" onclick="closee()">
+				</th>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
+<script>
+	function closee() {
+		window.close()
+	}
+</script>

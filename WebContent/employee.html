@@ -1,0 +1,152 @@
+<link rel="stylesheet" href="style_employee.css">
+<html><head><title>Employee</title></head></html>
+<body>      
+<form name=f method=post action=employee1.jsp>
+    <marquee direction="down" scrollamount=2><h1>Employee Details</h1></marquee>
+<table border= 20>
+            <tr>
+                <th align ="left">&nbsp&nbsp Employee ID</th>
+                <th><input type=text name=t1></th>
+            </tr>
+            <tr>
+                <th align ="left"> &nbsp&nbsp Employee Name</th>
+                <th><input type=text name=t2 onkeypress="return allowOnlyLetters(event,this)"></th>
+            </tr>
+            <tr>
+                <th align ="left"> &nbsp&nbsp Father name</th>
+                <th><input type=text name=t3 onkeypress="return allowOnlyLetters(event,this)"></th>
+            </tr>
+            <tr>
+                <th align ="left">&nbsp&nbsp Aadhar Number</th>
+                <th><input type=text name=t4 onkeypress="return allowOnlyNumber(event,this)"></th>
+            </tr>
+            <tr>
+                <th align ="left">&nbsp&nbsp Date of Birth</th>
+                <th><input type=text name=t5 onkeypress="return allowOnlyNumber(event,this)"></th>
+            </tr>
+            <tr>
+                <th align ="left">&nbsp&nbsp Address</th>
+                <th><input type=text name=t6 ></th>
+            </tr>
+            <tr>
+                <th align ="left">&nbsp&nbsp Phone Number</th>
+                <th><input type=text name=t7 onkeypress="return allowOnlyNumber(event,this)"></th>
+            </tr>
+            <tr>
+                <th align ="left"> &nbsp&nbsp Email ID</th>
+                <th><input type=text name=t8></th>
+            </tr>
+            <tr>
+                <th align ="left">&nbsp&nbsp Gender</th>
+                <th><input type=text name=t9 onkeypress="return allowOnlyLetters(event,this)"></th>
+            </tr>
+            <tr>
+                <th align ="left">&nbsp&nbsp Marital Status</th>
+                <th><input type=text name=t10 onkeypress="return allowOnlyLetters(event,this)"></th>
+            </tr>
+            <tr>
+                <th align ="left">&nbsp&nbsp Basic Salary</th>
+                <th><input type=text name=t11 onkeypress="return allowOnlyNumber(event,this)"></th>
+            </tr>
+            <tr>
+                <th align ="left">&nbsp&nbsp Date of Joining</th>
+                <th><input type=text name=t12 onkeypress="return allowOnlyNumber(event,this)"></th>
+            </tr>
+            <tr>
+                <th align ="left">&nbsp&nbsp Designation</th>
+                <th><input type=text name=t13 onkeypress="return allowOnlyLetters(event,this)"></th>
+            </tr>
+            <tr>
+                <th align ="left">&nbsp&nbsp Department</th>
+                <th><input type=text name=t14 onkeypress="return allowOnlyLetters(event,this)"></th>
+            </tr>
+            <tr>
+                <th colspan=2>
+                    <input type=button value="New" onclick="clean()" >
+                    <input type=submit name=b1 value="Save">
+                    <input type=submit name=b1 value="Update">
+                    <input type=submit name=b1 value="Delete">
+                    <input type=button value="Menu" onclick="menu_open()">
+                </th>
+            </tr>
+            <tr>
+                <th colspan=2>
+                    
+                    <select name=s>
+                        <option>Empid</option>
+                        <option>Ename</option>
+                        <option>Aadhar</option>
+                        <option>Deptt</option>
+                    </select>
+                    <input type=text name=t15><br>
+                    <input type=submit name=b1 value="AllSearch">
+                    <input type=submit name=b1 value="Search">
+                </th>
+            </tr>
+        </table>
+        </form>
+</body>
+<script>
+    function clean()
+    {
+        f.t1.value=""
+        f.t2.value=""
+        f.t3.value=""
+        f.t4.value=""
+        f.t5.value=""
+        f.t6.value=""
+        f.t7.value=""
+        f.t8.value=""
+        f.t9.value=""
+        f.t10.value=""
+        f.t11.value=""
+        f.t12.value=""
+        f.t13.value=""
+        f.t14.value=""
+        f.t15.value=""
+    }
+    function menu_open()
+    {
+    	window.open("menu.html","_self")
+    }
+ // Allow only letter
+	function allowOnlyLetters(e,t)
+	{
+		if(window.event)
+			{
+				var charCode = window.event.keyCode;
+			}
+		else if(e)
+			{
+			var charCode=e.which;
+			}
+		else{return true;}
+		if((charCode > 64 && charCode <91) || (charCode >96 && charCode <123) || (charCode ==32) )
+			return true;
+		else
+			{
+			alert("Please Enter Only Alphabets");
+			return false;
+			}
+	}
+	// Allow only Number
+	function allowOnlyNumber(e,t)
+	{
+		if(window.event)
+			{
+				var charCode = window.event.keyCode;
+			}
+		else if(e)
+			{
+			var charCode=e.which;
+			}
+		else{return true;}
+		if((charCode >=48 && charCode<=57) || (charCode == 32) ||(charCode==43)||(charCode==45))
+			return true;
+		else
+			{
+			alert("Please Enter Only Numbers");
+			return false;
+			}
+	}
+</script>

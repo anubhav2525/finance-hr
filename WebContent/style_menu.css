@@ -1,0 +1,36 @@
+body{
+    background: linear-gradient(-45deg,#ee7752,#e73c7e,#23a6d5,#23d5ab);
+}
+marquee{
+    margin-left: 650;
+    font-size: large;
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-variant: initial;
+    color: white;
+}
+table{
+    margin-left: 350;
+    border-radius: 12px;
+    border-color: black;
+}
+th{
+    border-width: 0ch;
+}
+input[type=button]
+{
+    height: 28;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+    font-weight: bold;
+    background: linear-gradient( #23a6d5 30%,#ee7752 100% );
+    border-radius: 16px;
+    width: 140;
+    border-width: 0ch;
+    cursor: pointer;
+    text-align: center;
+}
+input[type=button]:hover{
+    background-color: black;
+    color: white;
+}

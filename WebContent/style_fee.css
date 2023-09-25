@@ -1,0 +1,82 @@
+body{
+    background: linear-gradient(#0ccf98 0%, #1c67f3 100%);
+}
+marquee{
+    margin-left: 670;
+    margin-top: 40;
+    font-size: xx-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    font-style: oblique;
+    color: #1c67f3;
+
+}
+table{
+    margin-left: 20;
+    margin-top: 20;
+    border-radius: 50px;
+    border-color: rgba(6, 21, 3, 0.43);
+}
+th{
+    border-width: 0ch;
+    font-size: x-large;
+    font-family:Arial;
+    font-weight: bolder;
+}
+input[type=text]
+{
+    border-radius: 16px;
+    border-color: black;
+    border-width: 3;
+    height: 30;
+    width: 200;
+    text-align: center;
+    color: blue;
+    background-color:#ffffffb0;
+    font-size: large;
+    font-family: Arial;
+    font-weight: bolder;
+}
+input[type=button]
+{
+    height: 30;
+    width: 110;
+    font-size: large;
+    font-family: Segoe UI;
+    font-weight: bolder;
+    background-color: #0ccf9897;
+    border-radius: 16px;
+    text-align: center;
+}
+input[type=submit] {
+    height: 30;
+    width: 110;
+    font-size: large;
+    font-family: Segoe UI;
+    font-weight: bolder;
+    background-color: #0ccf9897;
+    border-radius: 16px;
+    text-align: center;
+}
+select{
+    height: 30;
+    width: 110;
+    font-size: large;
+    font-family: Segoe UI;
+    font-weight: bolder;
+    background-color: #0ccf9897;
+    border-radius: 16px;
+    text-align: center;
+}
+input[type=button]:hover{
+    background-color: white;
+    color: black;
+}
+input[type=submit]:hover {
+    background-color: white;
+    color: black;
+}
+select:hover {
+    background-color: white;
+    color: black;
+}

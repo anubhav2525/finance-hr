@@ -1,0 +1,84 @@
+body{
+    background-image: url(attendance3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+marquee{
+    margin-left: 620;
+}
+table{
+    margin-left:510;
+    height: 400;
+    width: 500;
+    border-radius: 16px;
+    border-color: rgba(0, 0, 0, 0.605);
+}
+input[type=text]
+{
+    border-radius: 12px;
+    height: 30;
+    width: 250;
+    text-align: center;color: black;
+    font-size: large;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-color: blue;
+}
+th{
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgba(255, 255, 255, 0.562);
+    border-width: 0ch;
+    color: rgba(0, 0, 255, 0.786);
+    font-weight: bold;
+    
+}
+input[type=submit] {
+    height: 30;
+    width: 90;
+    border-radius: 12px;
+    font-size: large;
+    font-family: 'Times New Roman';
+    background-color: rgba(255, 0, 0, 0.559);
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+input[type=button] {
+    height: 30;
+    width: 90;
+    border-radius: 12px;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgba(255, 0, 0, 0.559);
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+select {
+    height: 30;
+    width: 90;
+    border-radius: 12px;
+    border-width: 3;
+    cursor: pointer;
+    background-color: rgba(255, 0, 0, 0.559);
+    font-size: large;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+input[type=button]:hover {
+    background-color: white;
+
+}
+
+input[type=submit]:hover {
+    background-color: white;
+}
+
+select:hover {
+    background-color: white;
+}

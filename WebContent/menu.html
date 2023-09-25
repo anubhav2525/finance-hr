@@ -1,0 +1,78 @@
+<link rel="stylesheet" href="style_menu.css">
+<!DOCTYPE html>
+<html>
+<head><title>Menu.html</title></head>
+<body>
+		<form name=f>
+			<marquee direction="down" scrollamount=1><h1>Menu</h1></marquee>
+			<h1><u>Human Resource Management</u></h1>
+			<p><b>Human Resource Management (HRM)</b> is the process of employing people,<br> 
+						  training them, compensating them, developing policies relating to them, and<br> 
+						  developing strategies to retain them. As a field, HRM has undergone many<br> 
+						  changes over the last twenty years, giving it an even more important role in<br>
+						   today's organizations.</p>
+			<h2>About Office Details click here  :-</h2>
+			<table border=3>
+				<tr>
+					<th><input type=button value="Employee"
+						onclick="employee_open()"></th>				
+					<th><input type=button value="Attendance"
+						onclick="attendance_open()"></th>
+					<th><input type=button value="Deduction"
+						onclick="deduction_open()"></th>
+					<th><input type=button value="Salary" onclick="salary_open()"></th>
+				</tr>
+				</table>
+				<h1><u>Student Management</u></h1>
+				<p>
+
+				</p>
+				<h2>About Instution Details click here :-</h2>
+				<table border=3>
+				<tr>
+					<th><input type=button value="Student" onclick="student_open()"></th>
+					<th><input type=button value="Program" onclick="program_open()"></th>
+					<th><input type=button value="Scholarship" onclick="scholarship_open()"></th>
+					<th><input type=button value="Fee" onclick="fee_open()"></th>
+				</tr>
+				<tr>
+					
+					<th><input type=button value="Fees Payment" onclick="fees_payment_open()"></th>
+					<th><input type=button value="Reciveable" onclick="reciveable_open()"></th>
+				</tr>
+			</table>
+</form>
+</body>
+</html>
+<script>
+	function employee_open() {
+		window.open("employee.html", "_self")
+	}
+	function attendance_open() {
+		window.open("attendance.html", "_self")
+	}
+	function deduction_open() {
+		window.open("deduction.html", "_self")
+	}
+	function salary_open() {
+		window.open("salary.html", "_self")
+	}
+	function student_open() {
+		window.open("student.html", "_self")
+	}
+	function fee_open() {
+		window.open("fee.html","_self")
+	}
+	function fees_payment_open() {
+		window.open("fees_payment.html","_self")
+	}
+	function scholarship_open() {
+		window.open("scholarship.html","_self")
+	}
+	function program_open() {
+		window.open("program.html","_self")
+	}
+	function reciveable_open() {
+		window.open("reciveable.html","_self")
+	}
+</script>

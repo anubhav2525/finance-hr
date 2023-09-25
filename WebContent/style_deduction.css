@@ -1,0 +1,87 @@
+body{
+    background-image: url(deduction3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+marquee{
+    margin-left: 670;
+    margin-top: 90;
+    color:red;
+}
+table{
+    margin-left: 500;
+    margin-top: 10;
+    height: 350;
+    width: 600;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.815);
+    border-color: hsla(331, 87%, 51%, 0.706);
+}
+th{
+    border-width: 0ch;
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: red;
+    font-style: italic;
+}
+input[type=text]
+{
+    border-radius: 12px;
+    border-color: brown;
+    border-width:4;
+    text-align: center;
+    color: black;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+  }
+
+input[type=button]
+{
+    border-radius: 16px;
+    height: 30;
+    width: 100;
+    background-color: rgba(0, 100, 0, 0.912);
+    color: white;
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+input[type=submit] {
+    border-radius: 16px;
+    height: 30;
+    width: 110;
+    background-color: rgba(0, 100, 0, 0.912);
+    color: white;
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+select {
+    border-radius: 16px;
+    height: 30;
+    width: 100;
+    background-color: rgba(0, 100, 0, 0.912);
+    color: white;
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+input[type=button]:hover{
+    background-color: silver;
+    color: black;
+}
+input[type=submit]:hover {
+    background-color: silver;
+    color: black;
+}
+select:hover {
+    background-color: silver;
+    color: black;
+    cursor: pointer;
+}

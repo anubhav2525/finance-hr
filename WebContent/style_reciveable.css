@@ -1,0 +1,89 @@
+body{
+    background: linear-gradient(#f8a663 0%, #71bb4b 100%);
+}
+marquee
+{
+    font-size: x-large;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-left: 670;
+    margin-top: 20;
+    color: red;
+}
+table{
+    border-radius: 50px;
+    border-color: rgba(255, 255, 255, 0.677);
+    background-color: rgba(104, 104, 244, 0.644);
+}
+th{
+    border-width: 0ch;
+    font-size: larger;
+    font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+     color: black;
+}
+input[type=text]
+{
+    border-radius: 16px;
+    height: 30;
+    width: 220;
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma,  Verdana, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: brown;
+}
+input[type=submit]
+{
+    border-radius: 16px;
+    font-size: 18;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    border-color: black;
+    border-width: 2;
+    color:white;
+    background-color: rgba(0, 100, 0, 0.785);
+    height: 35;
+    width: 110;
+    cursor: pointer;
+    text-align: center;
+}
+input[type=button] {
+    border-radius: 16px;
+    font-size: 18;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    border-color: black;
+    border-width: 2;
+    color: white;
+    background-color: rgba(0, 100, 0, 0.785);
+    height: 35;
+    width: 110;
+    cursor: pointer;
+    text-align: center;
+}
+select{
+    border-radius: 16px;
+    font-size: 18;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    border-color: black;
+    border-width: 2;
+    color: white;
+    background-color: rgba(0, 100, 0, 0.785);
+    height: 35;
+    width: 110;
+    cursor: pointer;
+    text-align: center;
+}
+input[type=button]:hover{
+    background-color: silver;
+    color: black;
+}
+input[type=submit]:hover {
+    background-color: silver;
+    color: black;
+}
+select:hover {
+    background-color: silver;
+    color: black;
+}

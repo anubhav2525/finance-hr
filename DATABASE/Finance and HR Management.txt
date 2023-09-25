@@ -1,0 +1,144 @@
+drop user hrf cascade
+/
+create user hrf identified by hrf
+/
+grant dba to hrf
+/
+conn hrf/hrf
+/
+create table employee
+(
+	empid nvarchar2(10) constraint Employee_ID primary key,constraint Empidpk_start_with_E check(empid like 'E___'),
+	ename nvarchar2(40),
+	fname nvarchar2(50),
+	aadhar nvarchar2(20),
+	dob nvarchar2(20),
+	address nvarchar2(50),
+	contact nvarchar2(20),
+	email nvarchar2(30),
+	gender nvarchar2(10),
+	marital_status nvarchar2(10),
+	bsalary nvarchar2(5),
+	doj nvarchar2(20),
+	design nvarchar2(20),
+	deptt nvarchar2(40)
+)
+/
+create table attendance 
+(
+	empid nvarchar2(10) constraint Employee_ID_Invalid1 references employee(empid) on delete cascade,
+	name nvarchar2(40),
+	present nvarchar2(20),
+	month nvarchar2(10),
+	yr nvarchar2(10),
+	days nvarchar2(10),
+	status nvarchar2(10)
+)
+/
+create table salary
+(
+	empid nvarchar2(10) constraint Employee_ID_Invalid2 references employee(empid) on delete cascade,
+	bsalary nvarchar2(5),
+	curr_salary nvarchar2(6),
+	deduction nvarchar2(5),
+	allowance nvarchar2(40),
+	netpay nvarchar2(6),
+	otherpay nvarchar2(5)
+)
+/
+create table deduction
+(
+	empid nvarchar2(10) constraint Employee_ID_Invalid3 references employee(empid) on delete cascade,
+	name nvarchar2(40),
+	ded_allo nvarchar2(40),
+	date1 nvarchar2(20)
+)
+/
+create table student 
+(
+	regno nvarchar2(20) constraint Registration_ID_Invalid1 primary key,constraint Registration_ID_Start_With_S check(regno like 'S___'),
+	name nvarchar2(40),
+	fname nvarchar2(50),
+	phone nvarchar2(20),
+	address nvarchar2(60),
+	program nvarchar2(60),
+	current_sem nvarchar2(10),
+	section nvarchar2(10),
+	status nvarchar2(20),
+	enroll_dt nvarchar2(20)
+)
+/
+create table fees_payment
+(
+	id nvarchar2(10) constraint Fee_ID_Invalid primary key,constraint Fee_ID_Start_with_P check(id like 'P___'),
+	regno nvarchar2(20) constraint Student_ID_Invlid1 references student(regno) on delete cascade,
+	issue_dt nvarchar2(20),
+	confirm nvarchar2(10),
+	paid_by nvarchar2(30),
+	paid_for nvarchar2(40),
+	amt nvarchar2(8),
+	balance nvarchar2(8),
+	semester nvarchar2(10),
+	total_amt nvarchar2(8),
+	bank_name nvarchar2(40),
+	receipt nvarchar2(40),
+	challan nvarchar2(40),
+	session1 nvarchar2(10),
+	status nvarchar2(10)
+)
+/
+create table fee
+(
+	id nvarchar2(10) constraint Fee_ID_Invalid1 references fees_payment(id) on delete cascade,
+	date1 nvarchar2(20),
+	session1 nvarchar2(10),
+	semester nvarchar2(10),
+	admission nvarchar2(20),
+	security nvarchar2(5),
+	library nvarchar2(5),
+	late nvarchar2(5),
+	progid nvarchar2(5),
+	reapire nvarchar2(5)
+)
+/
+create table program
+(
+	id nvarchar2(10) constraint Fee_ID_Invalid2 references fees_payment(id) on delete cascade,
+	name nvarchar2(40),
+	semester nvarchar2(10),
+	dt nvarchar2(20),
+	progid nvarchar2(10) constraint Program_ID primary key,constraint Program_ID_Start_With_P check(progid like 'P_%')
+)
+/
+create table reciveable
+(
+	program nvarchar2(30) constraint Program_Id_Invalid1 references program(progid) on delete cascade,
+	session1 nvarchar2(20),
+	first_sem nvarchar2(5),	
+	second_sem nvarchar2(5),
+	third_sem nvarchar2(5),
+	fourth_sem nvarchar2(5),
+	fifth_sem nvarchar2(5),
+	sixth_sem nvarchar2(5), 
+	seven_sem nvarchar2(5),
+	eight_sem nvarchar2(5),
+	total nvarchar2(8)
+)
+/
+create table scholarship
+(
+	sch_amt nvarchar2(8),
+	program nvarchar2(40) constraint Prograam_Id_Invalid2 references program(progid) on delete cascade,
+	session1 nvarchar2(20),
+	descr nvarchar2(100),
+	date1 nvarchar2(20)
+)
+/
+create table login
+(
+	logid nvarchar2(40),
+	pwd nvarchar2(40)
+)
+/
+ insert into login values('hrf','hrf');
+ insert into login values('anubhav','anubhav');

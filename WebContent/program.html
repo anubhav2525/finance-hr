@@ -1,0 +1,105 @@
+<link rel="stylesheet" href="style_program.css">
+<html><head><title>Program</title></head>
+<body>
+    <form name=f method=post action=program1.jsp>
+        <table border=30>
+            <marquee direction="down" scrollamount=1>Programs Details</marquee>
+            <tr>
+                <th align="left">Identity Number</th>
+                <th><input type=text name=t1></th>
+            </tr>
+            <tr>
+                <th align="left"> Student Name</th>
+                <th><input type=text name=t2 onkeypress="return allowOnlyLetter(event,this)"></th>
+            </tr>
+            <tr>
+                <th align="left">Semester</th>
+                <th><input type=text name=t3></th>
+            </tr>
+            <tr>
+                <th align="left">Date</th>
+                <th><input type=text name=t4 onkeypress="return allowOnlyNumber(event,this)"></th>
+            </tr>
+            <tr>
+            	<th align="left">Program ID</th>
+            	<th><input type=text name=t5></th>
+            <tr>
+                <th colspan=2>
+                    <input type=button value="New" onclick="clean()">
+                    <input type=submit value="Save" name=b1>
+                    <input type=submit value="Update" name=b1>
+                    <input type=submit value="Delete" name=b1>
+                     <input type=button onclick="menu_open()" value="Menu">
+                </th>
+            </tr>
+            <tr>
+                <th colspan=2>
+                    <input type=submit value="AllSearch" name=b1>
+                    <select>
+                        <option>ID</option>
+                        <option>Name</option>
+                        <option>Progid</option>
+                    </select>
+                    <input type=text name=t6>
+                    <input type=submit value="Search" name=b1>
+                </th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
+<script>
+    function clean()
+    {
+        f.t1.value=""
+        f.t2.value=""
+        f.t3.value=""
+        f.t4.value=""
+        f.t5.value=""
+        f.t6.value=""
+    }
+  	function menu_open() {
+		window.open("menu.html","_self")
+	}
+ // Allow only letter
+	function allowOnlyLetter(e,t)
+	{
+		if(window.event)
+			{
+				var charCode = window.event.keyCode;
+			}
+		else if(e)
+			{
+			var charCode=e.which;
+			}
+		else{return true;}
+		if((charCode > 64 && charCode <91) || (charCode >96 && charCode <123)||(charCode ==32))
+			return true;
+		else
+			{
+			alert("Please Enter Only Alphabets");
+			return false;
+			}
+	}
+ 	
+	// Allow only Number
+	function allowOnlyNumber(e,t)
+	{
+		if(window.event)
+			{
+				var charCode = window.event.keyCode;
+			}
+		else if(e)
+			{
+			var charCode=e.which;
+			}
+		else{return true;}
+		if((charCode >=48 && charCode<=57) || (charCode ==32) || (charCode==43) ||(charCode==45))
+			return true;
+		else
+			{
+			alert("Please Enter Only Numbers");
+			return false;
+			}
+	}
+ </script>

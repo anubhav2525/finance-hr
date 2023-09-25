@@ -1,0 +1,10 @@
+@ .\attendance.sql
+@ .\deduction.sql
+@ .\employee.sql
+@ .\fee.sql
+@ .\fees_payment.sql
+@ .\reciveable.sql
+@ .\salary.sql
+@ .\scholarship.sql
+@ .\student.sql
+@ .\program.sql
